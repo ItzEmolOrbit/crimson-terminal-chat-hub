@@ -223,7 +223,7 @@ const Index = () => {
           <div className="text-center mb-8">
             <Terminal className="w-16 h-16 mx-auto mb-4 text-primary" />
             <h1 className="text-2xl font-bold terminal-text mb-2">CRIMSON CONSOLE</h1>
-            <p className="text-muted-foreground text-sm">>>> SECURE TERMINAL ACCESS</p>
+            <p className="text-muted-foreground text-sm">{'>>>'} SECURE TERMINAL ACCESS</p>
           </div>
           
           <div className="space-y-4">
@@ -252,7 +252,7 @@ const Index = () => {
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-mono"
               disabled={!tempUsername.trim()}
             >
-              >>> INITIALIZE SESSION
+              {'>>>'} INITIALIZE SESSION
             </Button>
           </div>
           
