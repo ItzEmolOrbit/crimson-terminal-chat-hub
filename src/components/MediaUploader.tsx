@@ -1,6 +1,6 @@
 
 import React, { useRef, useState } from 'react';
-import { Upload, Image, Video, Mic, X } from 'lucide-react';
+import { Upload, Mic, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
@@ -55,16 +55,6 @@ const MediaUploader: React.FC<MediaUploaderProps> = ({
       return;
     }
 
-    // 10MB limit
-    if (file.size > 10 * 1024 * 1024) {
-      toast({
-        title: "FILE TOO LARGE",
-        description: ">>> Maximum file size is 10MB",
-        variant: "destructive"
-      });
-      return;
-    }
-
     const reader = new FileReader();
     reader.onload = (e) => {
       const result = e.target?.result as string;
@@ -80,7 +70,7 @@ const MediaUploader: React.FC<MediaUploaderProps> = ({
         onFileSelect(file, 'audio');
         toast({
           title: "AUDIO FILE SELECTED",
-          description: ">>> Audio file ready to send",
+          description: ">>> Audio file ready to upload",
         });
       }
     };

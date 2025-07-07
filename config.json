@@ -1,0 +1,19 @@
+
+{
+  "supabase": {
+    "url": "YOUR_SUPABASE_URL",
+    "anon_key": "YOUR_SUPABASE_ANON_KEY",
+    "service_role_key": "YOUR_SUPABASE_SERVICE_ROLE_KEY"
+  },
+  "app": {
+    "name": "Crimson Console",
+    "version": "1.0.0",
+    "environment": "development",
+    "max_file_size_mb": 10,
+    "allowed_file_types": ["image/*", "video/*", "audio/*"]
+  },
+  "encryption": {
+    "enabled": true,
+    "algorithm": "AES-GCM"
+  }
+}
